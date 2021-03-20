@@ -54,25 +54,25 @@ const handleSearch = (isTrue) => {
            {loggedInUser? <p> Welcome {loggedInUser.name}</p> :
            <p> Welcome {loggedInUser.email}</p> }
             <Row>
-                <Col xs={12} sm={12} md={6} lg={6}>
-                    {newUser && <form>
+                <Col xs={12} sm={12} md={6} lg={6} style={{marginBottom:'50px', textAlign:'center'}}>
+                    {newUser && <form style={{backgroundColor:'lavender', padding:'20px'}}>
                         <p>Pick From</p>
                         <input type='text' name='current-city' onBlur={handleBlur} placeholder='current city name' required />
                         <br />
                         <p>Pick To</p>
                         <input type='text' name='destination-city' onBlur={handleBlur} placeholder='destination city name' required />
                         <br />
-                        <button onClick={() => handleSearch(newUser)}
+                        <button onClick={() => handleSearch(newUser)} style={{marginTop:'20px'}}
                         >Search</button>
                     </form>}
 
                     {(newUser === false) &&
-                        <Card style={{ width: '14rem', height: '16rem' }}>
+                        <Card style={{ width: '14rem', height: '16rem', backgroundColor:'lavender'}}>
                             <Card.Body>
-                                <Card.Title style={{ color: 'black' }}>From {location.currentLocation} to {location.destinationLocation}</Card.Title>
+                                <Card.Title style={{ color: 'black' }}>From {location.currentLocation} ----- to {location.destinationLocation}</Card.Title>
                                 <Card.Text style={{ color: 'black' }}>
                                     <Card.Img src={TicketImage} style={{ height: '30px', width: '40px' }} alt=''></Card.Img>
-                                    <span>Ticket{id}</span>
+                                    <span style={{margin:'5px'}}>Ticket number{id}</span>
                                 </Card.Text>
                             </Card.Body>
                         </Card>

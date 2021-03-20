@@ -28,13 +28,14 @@ const Home = () => {
         backgroundImage: "url(" + BannerImg + ")",
         backgroundPosition:" center center",
         backgroundSize: "100% 100%",
-        height: '700px',
+        height: '1350px',
+        width:"100%",
         marginTop: '30px'
     }
     return (
         <div style={bannerStyle}>
         <Container maxWidth='lg'>
-            <Grid container className={classes.root} spacing={3}>
+            <Grid container className={classes.root} spacing={1}>
                 {tickets.map((ticket) => (
                     <Grid xs={12} sm={6} md={3} lg={3} key={ticket.id} item>
                         <Tickets ticket={ticket} />

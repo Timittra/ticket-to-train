@@ -12,3 +12,15 @@
 .nav-img {
     height: 70px;
 }
+
+/* responsive */
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    #navbarNav{
+        margin-left: 50px;
+    }
+    .nav-item{
+        margin-left: 5px;
+    }
+ }

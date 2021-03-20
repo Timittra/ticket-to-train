@@ -115,7 +115,7 @@ const updateUserName = name => {
 
 
  return (
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", marginTop:'30px'}}>
 
             <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id="" />
             { newUser ? <label htmlFor="newUser">Already have an account? Log in</label> :
@@ -161,7 +161,7 @@ const updateUserName = name => {
             }
 
             <p>
-            <span onClick={handleGoogleSignIn}><img style={{height:'50px', width:'50px', padding:"10px"}} src={`${GoogleImage}`} alt=''/>
+            <span onClick={handleGoogleSignIn} style={{cursor:'pointer'}}><img style={{height:'50px', width:'50px', padding:"10px"}} src={`${GoogleImage}`} alt=''/>
              Continue with Google</span>
             </p>
             
