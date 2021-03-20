@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# My Project Name === Ticket To Train
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## About Project 
 
-In the project directory, you can run:
+This project is all about **authentication**. As I am a new learner in this field, I have faced so many difficulties while doing the project.I have used React Router through out the project also private router. Using **Fake Data** I have loaded data and show various information as it can be more user friendly to show and to read. Also I have designed the ui using **bootstrap, React Bootstrap and Material UI**. It's not very good to use more than one framework for design but as I am exploring my creativity also that's why I have done this. In this project you will get two way of sign up/ register and log in.I have used **FontAwesome icons** for better interaction. I hope you will love it and surely I will develop it by adding new features in future. 
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Feature lists: 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* React _Router_
 
-### `npm test`
+* React _Private_ _Router_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Using _carts_ for all teams initial information 
 
-### `npm run build`
+* _EventHandler_ in the button of Explore for going in the new page. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Use specific ID for _dynamicRouting_ 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* After dynamic routing, again _fetch_ data using that ID
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* _FireBase_ authentication using Google and Email, password
 
-### `npm run eject`
+* Include _map_
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Search for current location to destination location.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Used _FontAwesome_ for icons 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* _Bootstrap_, _ReactBootstrap_, _Material-UI_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* _Responsive_ . 
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Link of Project](https://ticket-to-train.web.app/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Firebase deploy Link:** 
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<https://ticket-to-train.web.app/>
