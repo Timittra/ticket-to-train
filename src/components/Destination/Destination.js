@@ -3,12 +3,13 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-const-assign */
 /* eslint-disable no-unused-vars */
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import TicketImage from '../../images/ticket.png';
 import fakeData from '../../fakeData/fakeData';
 import LocationMap from '../LocationMap/LocationMap';
+import { UserContext } from '../../App';
 
 export let LocationContext = createContext();
 
@@ -21,18 +22,11 @@ const Destination = () => {
     let {id} = useParams();
     const [newUser, setNewUser] = useState(true);
     const [ticket, setTicket] = useState([]);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect( () => {
         setTicket(fakeData);
     },[]);
-
-    
-    const result = fakeData.find((data) => {
-            if(data.id === id){
-                return data.price;
-            }  
-      });
-    
 
      const handleBlur = (e) => {
         if(e.target.name === 'current-city'){
@@ -54,9 +48,11 @@ const handleSearch = (isTrue) => {
     setNewUser(isTrue);
     
 }
-
     return (
         <Container style={{marginTop: '50px'}}>
+            
+           {loggedInUser? <p> Welcome {loggedInUser.name}</p> :
+           <p> Welcome {loggedInUser.email}</p> }
             <Row>
                 <Col xs={12} sm={12} md={6} lg={6}>
                     {newUser && <form>
@@ -76,7 +72,7 @@ const handleSearch = (isTrue) => {
                                 <Card.Title style={{ color: 'black' }}>From {location.currentLocation} to {location.destinationLocation}</Card.Title>
                                 <Card.Text style={{ color: 'black' }}>
                                     <Card.Img src={TicketImage} style={{ height: '30px', width: '40px' }} alt=''></Card.Img>
-                                    <span>Ticket{id} ${result} </span>
+                                    <span>Ticket{id}</span>
                                 </Card.Text>
                             </Card.Body>
                         </Card>
