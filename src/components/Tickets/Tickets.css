@@ -1,0 +1,11 @@
+.ticket-card{
+    text-align: center;
+    margin: 30px;
+    padding: 40px;
+}
+.ticket-info-icons{
+    color: whitesmoke;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+}

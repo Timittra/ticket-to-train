@@ -1,0 +1,14 @@
+.header-section {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
+#navbarNav{
+    margin-left: 200px;
+}
+ .nav-item{
+    margin-left: 50px;
+}
+.nav-img {
+    height: 70px;
+}
