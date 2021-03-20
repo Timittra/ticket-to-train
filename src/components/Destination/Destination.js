@@ -20,13 +20,36 @@ const Destination = () => {
     });
 
     let {id} = useParams();
+    let count = parseInt(id);
+    let collection = [];
     const [newUser, setNewUser] = useState(true);
     const [ticket, setTicket] = useState([]);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
+
     useEffect( () => {
         setTicket(fakeData);
     },[]);
+
+    let data = ticket.map(tkt => {
+        collection.push(tkt.price);
+       
+    });
+
+    const atIndex = collection.find(function(element, index){
+        if(count === 1){
+            return index === 0;
+        }
+        else if(count === 2){
+            return index === 1;
+        }
+        else if(count === 3){
+            return index === 2;
+        }
+        else if(count === 4){
+            return index === 3;
+        }
+    });
 
      const handleBlur = (e) => {
         if(e.target.name === 'current-city'){
@@ -48,6 +71,8 @@ const handleSearch = (isTrue) => {
     setNewUser(isTrue);
     
 }
+
+
     return (
         <Container style={{marginTop: '50px'}}>
             
@@ -73,6 +98,7 @@ const handleSearch = (isTrue) => {
                                 <Card.Text style={{ color: 'black' }}>
                                     <Card.Img src={TicketImage} style={{ height: '30px', width: '40px' }} alt=''></Card.Img>
                                     <span style={{margin:'5px'}}>Ticket number{id}</span>
+                                    <p>Price of this ticket is {atIndex} Tk.</p>
                                 </Card.Text>
                             </Card.Body>
                         </Card>
