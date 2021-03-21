@@ -29,8 +29,7 @@ const Home = () => {
         backgroundPosition:" center center",
         backgroundSize: "100% 100%",
         height: '1350px',
-        width:"100%",
-        marginTop: '30px'
+        width:"100%"
     }
     return (
         <div style={bannerStyle}>

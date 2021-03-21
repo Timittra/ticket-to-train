@@ -9,7 +9,7 @@ const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     return (
-    <div className="header-section">
+    <div className="header-section" style={{backgroundColor: "#e3f2fd", padding:'20px'}}>
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light">
 
@@ -34,8 +34,11 @@ const Header = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/">Contact</Link>
                                 </li>
-                                <li className="nav-item">
-                                <Link className="nav-link" to="/login">Login</Link>
+                               <li className="nav-item">
+                                   {
+                                       (loggedInUser.isSignedIn === false) ?  <Link className="nav-link" to="/login">Login</Link> :
+                                       `${loggedInUser.name || loggedInUser.email}`
+                                   }
                                 </li>
                             </ul>
                         </div>

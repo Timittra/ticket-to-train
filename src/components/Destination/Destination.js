@@ -11,7 +11,7 @@ import fakeData from '../../fakeData/fakeData';
 import LocationMap from '../LocationMap/LocationMap';
 import { UserContext } from '../../App';
 
-export let LocationContext = createContext();
+// export let LocationContext = createContext();
 
 const Destination = () => {
     let [location, setLocation] = useState({
@@ -76,8 +76,7 @@ const handleSearch = (isTrue) => {
     return (
         <Container style={{marginTop: '50px'}}>
             
-           {loggedInUser? <p> Welcome {loggedInUser.name}</p> :
-           <p> Welcome {loggedInUser.email}</p> }
+           {<p> Welcome {loggedInUser.name || loggedInUser.email}</p>}
             <Row>
                 <Col xs={12} sm={12} md={6} lg={6} style={{marginBottom:'50px', textAlign:'center'}}>
                     {newUser && <form style={{backgroundColor:'lavender', padding:'20px'}}>

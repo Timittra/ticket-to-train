@@ -7,6 +7,7 @@ import firebaseConfig from './firebase.config';
 import { useHistory, useLocation } from 'react-router';
 import GoogleImage from '../../images/google.png';
 import {useForm} from "react-hook-form";
+import './Login.css';
 
 const Login = () => {
     let [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -69,6 +70,7 @@ const Login = () => {
         const newUserInfo = {...loggedInUser}; //
         newUserInfo.error = '';
         newUserInfo.success = true; 
+        newUserInfo.isSignedIn = true;
         setLoggedInUser(newUserInfo);
         history.replace(from);
         updateUserName(loggedInUser.name);
@@ -86,6 +88,7 @@ const Login = () => {
           const newUserInfo = {...loggedInUser}; //
           newUserInfo.error = '';
           newUserInfo.success = true;
+          newUserInfo.isSignedIn = true;
           setLoggedInUser(newUserInfo);
           history.replace(from);
           updateUserName(loggedInUser.name);
@@ -115,9 +118,9 @@ const updateUserName = name => {
 
 
  return (
-        <div style={{ textAlign: "center", marginTop:'30px'}}>
+        <div className='login'>
 
-            <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id="" />
+            <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" className='check-box'/>
             { newUser ? <label htmlFor="newUser">Already have an account? Log in</label> :
                 <label htmlFor="newUser">Don't have an account? Create an account</label>}
 
@@ -140,7 +143,7 @@ const updateUserName = name => {
                  />
                 <br />
 
-                {newUser && <input type="password" name="confirm_password" onBlur={handleBlur} placeholder='Confirm Password'
+                {newUser && <input className='confirm-pass' type="password" name="confirm_password" onBlur={handleBlur} placeholder='Confirm Password'
                  ref={register({
                   validate: value =>
                     value === password.current || "The passwords do not match"
@@ -152,7 +155,7 @@ const updateUserName = name => {
 
                 {errors.confirm_password && <p>{errors.confirm_password.message}</p>}
 
-                <input type="submit" value={newUser ? 'Create an account' : 'Log in'} />
+                <input className='button-login' type="submit" value={newUser ? 'Create an account' : 'Log in'} />
 
             </form>
             <p style={{ color: 'red' }}>{loggedInUser.error}</p>
@@ -161,7 +164,7 @@ const updateUserName = name => {
             }
 
             <p>
-            <span onClick={handleGoogleSignIn} style={{cursor:'pointer'}}><img style={{height:'50px', width:'50px', padding:"10px"}} src={`${GoogleImage}`} alt=''/>
+            <span onClick={handleGoogleSignIn} className='google-login'><img className='google-img' src={`${GoogleImage}`} alt=''/>
              Continue with Google</span>
             </p>
             

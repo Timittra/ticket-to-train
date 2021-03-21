@@ -1,0 +1,35 @@
+.login{
+    text-align: center;
+    background-color: lavender;
+    height: 700px;
+}
+
+.check-box{
+    margin: 30px;
+}
+
+.google-login{
+    background-color:lightyellow;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+    cursor:pointer;
+}
+.google-img{
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+}
+.login input{
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: ghostwhite;
+}
+.button-login{
+    background-color: lightyellow;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.confirm-pass{
+    margin-bottom: 10px;
+}
