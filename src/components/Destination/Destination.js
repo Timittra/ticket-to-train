@@ -99,7 +99,7 @@ const Destination = () => {
                         <p>Pick To</p>
                         <input type='text' name='destination-city' onBlur={handleBlur} placeholder='destination city name' required />
                         <br />
-                        <input style={{marginTop:'10px'}} type='text' placeholder={`${currentDate('-')}`}/>
+                        <input style={{marginTop:'10px'}} type='text' placeholder={`${currentDate('-')}`} disabled/>
                         <br />
                         <button onClick={() => handleSearch(newUser)} style={{marginTop:'20px'}}
                         >Search</button>
